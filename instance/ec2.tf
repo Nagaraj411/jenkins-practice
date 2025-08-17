@@ -32,3 +32,13 @@ resource "aws_security_group" "allow_all_jenkins" {
         Name = "allow-all-jenkins"
     }
 }
+
+# # Creating route 53 Record for jenkins
+# resource "aws_route53_record" "Jenkins" {
+#   zone_id         = "Z05005862BAG0R5BQ5WUP"
+#   name            = "jenkins-devops84.shop" #jenkins-dev.devops84.shop
+#   type            = "A"
+#   ttl             = 1
+#   records         = [aws_instance.jenkins.private_ip]
+#   allow_overwrite = true
+# }
