@@ -4,9 +4,9 @@ resource "aws_instance" "jenkins" {
   instance_type = "t3.micro" # Instance type, can be changed as needed
   vpc_security_group_ids = [aws_security_group.allow_all_jenkins.id] # Security Group ID
 
-  # user_data = file("jenkins.sh") # User data script to install jenkins
+    user_data = file("jenkins.sh") # User data script to install jenkins
    tags = { # Tags for the instance
-   Name = "jenkins" # Name of the instance
+    Name = "jenkins" # Name of the instance
    }
 }
 resource "aws_security_group" "allow_all_jenkins" {
